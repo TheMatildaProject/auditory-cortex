@@ -5,11 +5,7 @@ In boring terms, this is a minimalist Python app that handles speech-to-text.
 
 
 ## Installation
-### Old School
-```
-pip install -r requirements.txt
-export FLASK_APP=/app/app.py; export OWM_TOKEN=$OWM_API_KEY; flask run --host=0.0.0.0 --port=5000
-```
+As this is directly tied to Google Speech Cloud, you will need a service account key file from https://console.cloud.google.com/iam-admin/serviceaccounts/project?project=MY_PROJECT. Google will give you a json file, name it `matilda.json` and put in the root folder.
 
 ### Docker
 #### Build
