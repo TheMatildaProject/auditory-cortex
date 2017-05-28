@@ -5,7 +5,7 @@ In boring terms, this is a minimalist Python app that handles speech-to-text.
 
 
 ## Installation
-As this is directly tied to Google Speech Cloud, you will need a service account key file from https://console.cloud.google.com/iam-admin/serviceaccounts/project?project=MY_PROJECT. Google will give you a json file, name it `matilda.json` and put on the root folder.
+As this is directly tied to Google Speech Cloud, you will need a service account key file from https://console.cloud.google.com/iam-admin/serviceaccounts/project?project=MY_PROJECT. Google will give you a json file, name it `gcloud.json` and put in the `config` folder.
 
 ### Docker
 #### Build
@@ -13,7 +13,6 @@ As this is directly tied to Google Speech Cloud, you will need a service account
 
 #### One-off run
 `docker run --name auditory-cortex -p 5003:5000 auditory`
-
 
 ## Usage
 ### Request Example
@@ -26,3 +25,8 @@ curl -H "Content-Type: application/json" -X POST -d '{"audio": "UklGRiTQAwBXQVZF
 ```
 { "text": "test test test" }
 ```
+
+## Use cases
+Auditory Cortex is made to be used as an independent service, so no other parts of Matilda are required for it to work,  however you can also use the [Auditory Cortex](https://github.com/TheMatildaProject/auditory-cortex) in order to have a daemon running and listening to orders to come from your computer's mic.
+
+If you would like to listen to commands and have them queued for execution, you will require [Corpus Callosum](https://github.com/TheMatildaProject/corpus-callosum). You will also need to config `config/corpus-callosum.json` appropriately.
