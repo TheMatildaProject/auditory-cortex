@@ -5,7 +5,7 @@ In boring terms, this is a minimalist Python app that handles speech-to-text.
 
 
 ## Installation
-As this is directly tied to Google Speech Cloud, you will need a service account key file from https://console.cloud.google.com/iam-admin/serviceaccounts/project?project=MY_PROJECT. Google will give you a json file, name it `matilda.json` and put in the root folder.
+As this is directly tied to Google Speech Cloud, you will need a service account key file from https://console.cloud.google.com/iam-admin/serviceaccounts/project?project=MY_PROJECT. Google will give you a json file, name it `matilda.json` and put on the root folder.
 
 ### Docker
 #### Build
