@@ -38,7 +38,7 @@ WORKDIR /app
 ADD . .
 
 # Init google SDK
-RUN gcloud auth activate-service-account --key-file matilda.json
+RUN gcloud auth activate-service-account --key-file config/gcloud.json
 
 # Install project dependencies
 RUN sudo pip install -r requirements.txt

@@ -1,3 +1,4 @@
 *.pyc
-matilda.json
+config/gcloud.json
+config/corpus-callosum.json
 venv
