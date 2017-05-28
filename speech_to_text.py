@@ -22,18 +22,17 @@ class SpeechToText(object):
         self._speech_client = speech.Client()
  
     def getFromGoogle(self):
-        with wave.open("file.wav", "rb") as audio_file:
+        with io.open("file.wav", "rb") as audio_file:
             content = audio_file.read()
-            sample = speech_client.sample(
+            sample = self._speech_client.sample(
                 content,
                 source_uri=None,
-                encoding='LINEAR16',
-                sample_rate_hertz=16000)
+                encoding='LINEAR16')
 
         alternatives = sample.recognize('en-UK')
 
         for alternative in alternatives:
-            print('Transcript: {}'.format(alternative.transcript))
+            return alternative.transcript
 
         #r = sr.Recognizer()
 
